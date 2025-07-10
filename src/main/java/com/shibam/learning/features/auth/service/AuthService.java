@@ -105,6 +105,7 @@ public class AuthService {
 
 
     public ResponseEntity<?> login(LoginRequest request) {
+        System.out.println("Login attempt for user: " + request.toString());
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
         );
